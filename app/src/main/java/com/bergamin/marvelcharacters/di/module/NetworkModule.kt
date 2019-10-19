@@ -41,7 +41,7 @@ class NetworkModule {
         return Retrofit.Builder()
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .baseUrl("http://gateway.marvel.com/v1/public/characters/")
+            .baseUrl("http://gateway.marvel.com/")
             .client(okHttpClient)
             .build()
     }
