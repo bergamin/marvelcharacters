@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface MarvelApi {
 
     @GET("/")
-    fun getSearch(@Query("name") name: String): Call<SearchResponse>
+    fun getSearch(@Query("nameStartsWith") name: String): Call<SearchResponse>
 
     @GET("/")
     fun getCharacter(@Query("") id: String): Call<CharacterResponse>
