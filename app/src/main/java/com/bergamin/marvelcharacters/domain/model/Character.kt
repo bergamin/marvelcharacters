@@ -4,17 +4,23 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Character(
+    val id: Int? = null,
     val name: String? = null,
-    val picture: String? = null
+    val description: String? = null,
+    val thumbnail: String? = null
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(id ?: 0)
         parcel.writeString(name)
-        parcel.writeString(picture)
+        parcel.writeString(description)
+        parcel.writeString(thumbnail)
     }
 
     override fun describeContents(): Int {

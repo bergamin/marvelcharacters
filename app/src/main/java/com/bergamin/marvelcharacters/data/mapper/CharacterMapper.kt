@@ -7,14 +7,16 @@ import com.bergamin.marvelcharacters.data.response.SearchResponse
 object CharacterMapper {
 
     fun toCharactersList(response: SearchResponse?): List<Character> {
-        return response?.search?.map { toCharacter(it) } ?: emptyList()
+        return response?.data?.results?.map { toCharacter(it) } ?: emptyList()
     }
 
     fun toCharacter(response: CharacterResponse?): Character {
         return response?.let {
             Character(
+                response.id,
                 response.name,
-                response.picture
+                response.description,
+                response.thumbnail?.path
             )
         } ?: run { Character() }
     }
