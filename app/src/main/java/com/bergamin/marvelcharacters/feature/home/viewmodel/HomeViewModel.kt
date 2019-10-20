@@ -20,7 +20,7 @@ class HomeViewModel @Inject constructor(private val marvelRepository: MarvelRepo
 
     init {
         liveDataMediator.addSource(charactersLiveData) { characters ->
-            isLoading.set(true)
+            isLoading.set(false)
             liveDataMediator.value = characters.map { CharacterItemViewModel(it) }
         }
     }
