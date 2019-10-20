@@ -16,7 +16,7 @@ object CharacterMapper {
                 response.id,
                 response.name,
                 response.description,
-                response.thumbnail?.path
+                response.thumbnail?.path + "." + response.thumbnail?.extension
             )
         } ?: run { Character() }
     }
