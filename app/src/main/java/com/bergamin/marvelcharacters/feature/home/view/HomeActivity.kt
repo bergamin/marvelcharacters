@@ -14,6 +14,7 @@ import com.bergamin.marvelcharacters.R
 import com.bergamin.marvelcharacters.databinding.ActivityHomeBinding
 import com.bergamin.marvelcharacters.di.ViewModelFactory
 import com.bergamin.marvelcharacters.domain.model.Character
+import com.bergamin.marvelcharacters.feature.character.view.CharacterActivity
 import com.bergamin.marvelcharacters.feature.home.viewmodel.HomeViewModel
 import javax.inject.Inject
 
@@ -38,6 +39,9 @@ class HomeActivity : AppCompatActivity() {
                 it.items = characters
                 it.listener = object : CharactersAdapterListener {
                     override fun didSelectCharacter(character: Character) {
+                        startActivity(Intent(this@HomeActivity, CharacterActivity::class.java).apply {
+                            putExtra(CharacterActivity.CHARACTER_ARG, character)
+                        })
                     }
                 }
             }
@@ -59,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.home_menu, menu)
         (menu?.findItem(R.id.menu_search)?.actionView as? SearchView)?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(p0: String?): Boolean {
+            override fun onQueryTextSubmit(query: String?): Boolean {
                 return true
             }
 
