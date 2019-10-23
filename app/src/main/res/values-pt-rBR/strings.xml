@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Personagens da Marvel</string>
     <string name="search_character">Pesquisar Personagem</string>
+    <string name="description">Descrição\n%s</string>
 </resources>

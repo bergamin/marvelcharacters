@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bergamin.marvelcharacters.di.ViewModelFactory
 import com.bergamin.marvelcharacters.di.ViewModelKey
+import com.bergamin.marvelcharacters.feature.character.viewmodel.CharacterViewModel
 import com.bergamin.marvelcharacters.feature.home.viewmodel.HomeViewModel
 import dagger.Binds
 import dagger.Module
@@ -19,4 +20,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(HomeViewModel::class)
     internal abstract fun bindHomeViewModel(viewModel: HomeViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CharacterViewModel::class)
+    internal abstract fun bindCharacterViewModel(viewModel: CharacterViewModel): ViewModel
 }
