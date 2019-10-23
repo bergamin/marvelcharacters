@@ -34,7 +34,8 @@
                 android:layout_margin="16dp"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                android:text="@{viewModel.liveDataMediator.name}" />
+                android:text="@{viewModel.liveDataMediator.name}"
+                tools:text="Character's Name"/>
 
             <TextView
                 android:id="@+id/character_description"
@@ -42,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:textSize="18sp"
-                android:text="@{viewModel.description}" />
+                android:text="@{viewModel.description}"
+                tools:text="Description\nPlaceholder"/>
         </LinearLayout>
     </ScrollView>
 </layout>

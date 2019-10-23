@@ -13,5 +13,5 @@ interface MarvelApi {
     fun getSearch(@Query("nameStartsWith") name: String): Call<SearchResponse>
 
     @GET("/v1/public/characters/{id}")
-    fun getCharacter(@Path("id") id: String): Call<CharacterResponse>
+    fun getCharacter(@Path("id") id: String): Call<SearchResponse>
 }
