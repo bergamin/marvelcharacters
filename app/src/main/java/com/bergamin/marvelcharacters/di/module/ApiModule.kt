@@ -4,7 +4,6 @@ import com.bergamin.marvelcharacters.data.api.MarvelApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
-import retrofit2.create
 
 @Module
 class ApiModule {

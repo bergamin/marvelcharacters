@@ -14,7 +14,6 @@ class MarvelInterceptor : Interceptor {
         val hash = getMD5Hash(timestamp + privateKey + publicKey)
 
         val url = chain.request().url().newBuilder()
-            .addPathSegments("v1/public/characters")
             .addQueryParameter("apikey", publicKey)
             .addQueryParameter("ts", timestamp)
             .addQueryParameter("hash", hash)

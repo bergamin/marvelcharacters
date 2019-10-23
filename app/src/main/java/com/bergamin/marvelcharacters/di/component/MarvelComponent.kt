@@ -1,6 +1,7 @@
 package com.bergamin.marvelcharacters.di.component
 
 import com.bergamin.marvelcharacters.di.module.*
+import com.bergamin.marvelcharacters.feature.character.view.CharacterActivity
 import com.bergamin.marvelcharacters.feature.home.view.HomeActivity
 import dagger.Component
 import javax.inject.Singleton
@@ -17,4 +18,5 @@ import javax.inject.Singleton
 )
 interface MarvelComponent {
     fun inject(activity: HomeActivity)
+    fun inject(activity: CharacterActivity)
 }

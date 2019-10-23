@@ -3,7 +3,6 @@ package com.bergamin.marvelcharacters.domain.repository
 import androidx.lifecycle.MutableLiveData
 import com.bergamin.marvelcharacters.data.api.MarvelApi
 import com.bergamin.marvelcharacters.data.mapper.CharacterMapper
-import com.bergamin.marvelcharacters.data.response.CharacterResponse
 import com.bergamin.marvelcharacters.data.response.SearchResponse
 import com.bergamin.marvelcharacters.domain.model.Character
 import retrofit2.Call
@@ -32,16 +31,16 @@ class MarvelRepositoryImpl @Inject constructor(private val api: MarvelApi) : Mar
     }
 
     override fun getCharacter(id: String, characterLiveData: MutableLiveData<Character>) {
-        api.getCharacter(id).enqueue(object : Callback<CharacterResponse> {
-            override fun onFailure(call: Call<CharacterResponse>, t: Throwable) {
+        api.getCharacter(id).enqueue(object : Callback<SearchResponse> {
+            override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
                 characterLiveData.value = null
             }
 
             override fun onResponse(
-                call: Call<CharacterResponse>,
-                response: Response<CharacterResponse>
+                call: Call<SearchResponse>,
+                response: Response<SearchResponse>
             ) {
-                characterLiveData.value = CharacterMapper.toCharacter(response.body())
+                characterLiveData.value = CharacterMapper.toCharactersList(response.body())[0]
             }
         })
     }
