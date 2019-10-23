@@ -24,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:src="@{viewModel.liveDataMediator.thumbnail}" />
+                android:src="@{viewModel.liveDataMediator.thumbnail}"
+                tools:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:id="@+id/character_name"
