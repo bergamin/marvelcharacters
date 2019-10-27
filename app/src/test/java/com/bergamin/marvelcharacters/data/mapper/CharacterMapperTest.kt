@@ -33,18 +33,18 @@ class CharacterMapperTest {
             thumbnail1Response
         )
     }
+    private val thumbnail1Response by lazy {
+        ThumbnailResponse(
+            "jpg",
+            "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b"
+        )
+    }
     private val character1 by lazy {
         Character(
             "1009610",
             "Spider-Man",
             "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people.",
             "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg"
-        )
-    }
-    private val thumbnail1Response by lazy {
-        ThumbnailResponse(
-            "jpg",
-            "http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b"
         )
     }
 
@@ -56,18 +56,18 @@ class CharacterMapperTest {
             thumbnail2Response
         )
     }
+    private val thumbnail2Response by lazy {
+        ThumbnailResponse(
+            "jpg",
+            "http://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f"
+        )
+    }
     private val character2 by lazy {
         Character(
             "1009157",
             "Spider-Girl (Anya Corazon)",
             " ",
             "http://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f.jpg"
-        )
-    }
-    private val thumbnail2Response by lazy {
-        ThumbnailResponse(
-            "jpg",
-            "http://i.annihil.us/u/prod/marvel/i/mg/a/10/528d369de3e4f"
         )
     }
 }
