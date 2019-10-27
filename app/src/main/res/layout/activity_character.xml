@@ -10,7 +10,7 @@
     </data>
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -21,7 +21,8 @@
             <ImageView
                 android:id="@+id/character_thumbnail"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
+                android:scaleType="centerCrop"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:src="@{viewModel.liveDataMediator.thumbnail}"
@@ -45,7 +46,7 @@
                 android:layout_margin="16dp"
                 android:textSize="18sp"
                 android:text="@{viewModel.description}"
-                tools:text="Description\nPlaceholder"/>
+                tools:text="Description:\nThis is a placeholder description to make it possible to see what it would look like in the preview window"/>
         </LinearLayout>
     </ScrollView>
 </layout>
