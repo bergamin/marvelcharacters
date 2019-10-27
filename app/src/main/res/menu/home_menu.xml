@@ -8,6 +8,6 @@
         android:icon="@android:drawable/ic_menu_search"
         android:title="@string/search_character"
         android:tooltipText="@string/search_character"
-        app:actionViewClass="android.widget.SearchView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
 </menu>
