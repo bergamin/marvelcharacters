@@ -5,6 +5,8 @@ For being able to run this app, you will need to generate your Marvel API privat
 
 Unit tests currently cover the data mapper and model classes
 
+![](https://media.giphy.com/media/RGSxwFhMmgk2qG40OR/giphy.gif)
+
 ## Changelog
 
 ### [27/10/2019 - 1.1.0](https://github.com/bergamin/marvelcharacters/releases/tag/RELEASE_1.1.0)
